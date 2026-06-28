@@ -3,122 +3,536 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Wiki Diseño | Diseño Web</title>
-	<link rel="stylesheet" href="CSS/index.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <title>Wiki Diseño</title>
+
+  <link rel="stylesheet" href="css/estilos-index.css">
 </head>
+
 <body>
 
   <header class="header-wiki">
 
-  <div class="header-superior">
-    
-    <div class="titulo-wiki">
-      <h1>Wiki <span>Diseño</span></h1>
-      <p>Todo sobre diseño en un solo lugar.</p>
-    </div>
+    <div class="header-superior">
 
-    <div class="busqueda-usuario">
-      <div class="barra-busqueda">
-        <img src="../img/lupa.svg" alt="Buscar">
-        <input type="text" placeholder="Buscar temas de diseño...">
+      <div class="titulo-wiki">
+        <h1>Wiki <span>Diseño</span></h1>
+        <p>Todo sobre diseño en un solo lugar.</p>
       </div>
 
-		<img class="icono-usuario" src="img/user-icon.svg" alt="Usuario">
+      <div class="busqueda-usuario">
+        <div class="barra-busqueda">
+          <img src="img/lupa.svg" alt="Buscar">
+          <input type="text" placeholder="Buscar temas de diseño...">
+        </div>
+
+        <img class="icono-usuario" src="img/user-icon.svg" alt="Usuario">
+      </div>
+
     </div>
-
-  </div>
-
 <button class="boton-menu" id="boton-menu" aria-label="Abrir menú" aria-expanded="false">
   <span></span>
   <span></span>
   <span></span>
 </button>
 
-<nav class="menu-temas" id="menu-temas">
-	
-  <a href="#" class="menu-item">
-    <img src="../img/user-experience.svg" alt="">
+<nav class="menu-temas" id="menu-temas" aria-label="Filtrar temas">
+
+  <button class="menu-item activo" type="button" data-filtro="todos">
+    <span>Todos</span>
+  </button>
+
+  <button class="menu-item" type="button" data-filtro="experiencia-usuario">
+    <img src="img/user-experience.svg" alt="">
     <span>Experiencia de usuario</span>
-  </a>
+  </button>
 
-  <a href="#" class="menu-item">
-    <img src="../img/web-design.svg" alt="">
+  <button class="menu-item" type="button" data-filtro="diseno-web">
+    <img src="img/web-design.svg" alt="">
     <span>Diseño web</span>
-  </a>
+  </button>
 
-  <a href="#" class="menu-item activo">
-    <img src="../img/design-thinking.svg" alt="">
-    <span>Design thinking</span>
-  </a>
+  <button class="menu-item" type="button" data-filtro="design-thinking">
+    <img src="img/design-thinking.svg" alt="">
+    <span>Design Thinking</span>
+  </button>
 
-  <a href="#" class="menu-item">
-    <img src="../img/user-focus.svg" alt="">
+  <button class="menu-item" type="button" data-filtro="diseno-centrado">
+    <img src="img/user-focus.svg" alt="">
     <span>Diseño centrado en el usuario</span>
-  </a>
+  </button>
 
-  <a href="#" class="menu-item">
-    <img src="../img/interactive.svg" alt="">
+  <button class="menu-item" type="button" data-filtro="diseno-interaccion">
+    <img src="img/interactive.svg" alt="">
     <span>Diseño de interacción</span>
-  </a>
+  </button>
 
-  <a href="#" class="menu-item">
-    <img src="../img/information.svg" alt="">
+  <button class="menu-item" type="button" data-filtro="arquitectura-informacion">
+    <img src="img/information.svg" alt="">
     <span>Arquitectura de la información</span>
-  </a>
+  </button>
 
-  <a href="#" class="menu-item">
-    <img src="../img/nav-design.svg" alt="">
+  <button class="menu-item" type="button" data-filtro="diseno-navegacion">
+    <img src="img/nav-design.svg" alt="">
     <span>Diseño de navegación</span>
-  </a>
+  </button>
 
-  <a href="#" class="menu-item">
-    <img src="../img/visual-design.svg" alt="">
+  <button class="menu-item" type="button" data-filtro="diseno-visual">
+    <img src="img/visual-design.svg" alt="">
     <span>Diseño visual</span>
-  </a>
+  </button>
 
 </nav>
-	</header>
-	
-  
-<button class="btn-arriba" id="btn-arriba" aria-label="Volver al inicio">↑</button>
+  </header>
 
+  <main>
+
+    <section class="intro-home">
+      <div>
+        <h2>Explora todos los <span>temas</span></h2>
+        <div class="linea-titulo"></div>
+      </div>
+
+      <p>
+        Encuentra recursos, guías y consejos sobre los principales temas del
+        diseño centrado en las personas y la innovación.
+      </p>
+    </section>
+
+    <section class="grid-temas">
+
+      <a data-tema="experiencia-usuario" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/01.png" alt="Experiencia de usuario">
+        </div>
+
+        <h3>Experiencia de usuario</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-web" href="https://ximenacs0706.github.io/Wiki-Web-Desing/" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/02.png" alt="Diseño web">
+        </div>
+
+        <h3>Diseño web</h3>
+        <p>Desarrollado por la pareja 2 Ximena Carrillo Salazar y Gabriela Quezada Rodríguez</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="design-thinking" href="design-thinking.html" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/03.png" alt="Design Thinking">
+        </div>
+
+        <h3>Design Thinking</h3>
+        <p>Desarrollado por la pareja 4 Daniel Lavenant y Ricardo González</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-centrado" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/04.png" alt="Diseño centrado en el usuario">
+        </div>
+
+        <h3>Diseño centrado en el usuario</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-interaccion" href="https://jaqueline17me-bot.github.io/web-design/" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/05.png" alt="Diseño de interacción">
+        </div>
+
+        <h3>Diseño de interacción</h3>
+        <p>Desarrollado por la pareja 5 Anete Jaqueline Maldonado Enriquez y Enrique Monteagudo Yañez</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="arquitectura-informacion" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/06.png" alt="Arquitectura de la información">
+        </div>
+
+        <h3>Arquitectura de la información</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-navegacion" href="https://ariz1002dm-jpg.github.io/web-design/" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/07.png" alt="Diseño de navegación">
+        </div>
+
+        <h3>Diseño de navegación</h3>
+        <p>Desarrollado por la pareja 7 Itzel Berenice Ramírez Rodríguez y Hannia Arizbeth Diego Martínez</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-visual" href="https://bresaher072.github.io/Dise-o-visual/ " class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/08.png" alt="Diseño visual">
+        </div>
+
+        <h3>Diseño visual</h3>
+        <p>Desarrollado por la pareja 8 Samara Del Carmen Segura Martínez y Brenda Sánchez Hernández</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+     <!-- seccion 2 -->
+<a data-tema="experiencia-usuario" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/01.png" alt="Experiencia de usuario">
+        </div>
+
+        <h3>Experiencia de usuario</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-web" href="https://suham-25.github.io/web-design-/" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/02.png" alt="Diseño web">
+        </div>
+
+        <h3>Diseño web</h3>
+        <p>Desarrollado por la pareja 10 Alejandra Borbolla Ibarra y Suham Savitri Aguilar Mandujano</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="design-thinking" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/03.png" alt="Design Thinking">
+        </div>
+
+        <h3>Design Thinking</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-centrado" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/04.png" alt="Diseño centrado en el usuario">
+        </div>
+
+        <h3>Diseño centrado en el usuario</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-interaccion" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/05.png" alt="Diseño de interacción">
+        </div>
+
+        <h3>Diseño de interacción</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="arquitectura-informacion" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/06.png" alt="Arquitectura de la información">
+        </div>
+
+        <h3>Arquitectura de la información</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-navegacion" href="https://pffzrbgwz7-coder.github.io/Dise-o-de-Navegacion/#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/07.png" alt="Diseño de navegación">
+        </div>
+
+        <h3>Diseño de navegación</h3>
+        <p>Desarrollado por la pareja 15 Anicandro Pérez Martínez y Selena Irasema Meza Ramos</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-visual" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/08.png" alt="Diseño visual">
+        </div>
+
+        <h3>Diseño visual</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+      
+ <!-- seccion 3 -->
+<a data-tema="experiencia-usuario" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/01.png" alt="Experiencia de usuario">
+        </div>
+
+        <h3>Experiencia de usuario</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-web" href="https://samhuerta-create.github.io/web-design/" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/02.png" alt="Diseño web">
+        </div>
+
+        <h3>Diseño web</h3>
+        <p>Desarrollado por la pareja 11 Jenny Estefania Campos Juarez y Samantha Castillo Huerta</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="design-thinking" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/03.png" alt="Design Thinking">
+        </div>
+
+        <h3>Design Thinking</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-centrado" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/04.png" alt="Diseño centrado en el usuario">
+        </div>
+
+        <h3>Diseño centrado en el usuario</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-interaccion" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/05.png" alt="Diseño de interacción">
+        </div>
+
+        <h3>Diseño de interacción</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="arquitectura-informacion" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/06.png" alt="Arquitectura de la información">
+        </div>
+
+        <h3>Arquitectura de la información</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-navegacion" href="https://mcbrandond06.github.io/Navigation-Design/" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/07.png" alt="Diseño de navegación">
+        </div>
+
+        <h3>Diseño de navegación</h3>
+        <p>Desarrollado por la pareja 31 Brandon Daniel Segura Alcantara y Victor Adriel Pérez Carrillo</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-visual" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/08.png" alt="Diseño visual">
+        </div>
+
+        <h3>Diseño visual</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+      
+ <!-- seccion 4 -->
+<a data-tema="experiencia-usuario" href="https://danabiu.github.io/actividaduvm-daniel-areli/A9_DAVZ-AOS/index.html" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/01.png" alt="Experiencia de usuario">
+        </div>
+
+        <h3>Experiencia de usuario</h3>
+        <p>Desarrollado por la pareja 9 Daniel Alejandro Valdez Zavala y Areli Ortiz Sánchez</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-web" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/02.png" alt="Diseño web">
+        </div>
+
+        <h3>Diseño web</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="design-thinking" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/03.png" alt="Design Thinking">
+        </div>
+
+        <h3>Design Thinking</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-centrado" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/04.png" alt="Diseño centrado en el usuario">
+        </div>
+
+        <h3>Diseño centrado en el usuario</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-interaccion" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/05.png" alt="Diseño de interacción">
+        </div>
+
+        <h3>Diseño de interacción</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="arquitectura-informacion" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/06.png" alt="Arquitectura de la información">
+        </div>
+
+        <h3>Arquitectura de la información</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-navegacion" href="https://mariavidalsg-hash.github.io/Diseno-de-navegacion/#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/07.png" alt="Diseño de navegación">
+        </div>
+
+        <h3>Diseño de navegación</h3>
+        <p>Desarrollado por la pareja 23 Emilia Miguel Castillo y María Fernanda Vidals González</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      <a data-tema="diseno-visual" href="#" class="tarjeta-tema">
+        <div class="imagen-tema">
+          <img src="img/08.png" alt="Diseño visual">
+        </div>
+
+        <h3>Diseño visual</h3>
+        <p>Desarrollado por la pareja # nombres</p>
+
+        <span class="flecha-tema" aria-hidden="true">→</span>
+      </a>
+
+      
+
+        
+    </section>
+
+  </main>
+<button class="btn-arriba" id="btn-arriba" type="button" aria-label="Volver al inicio">
+  ↑
+</button>
   <footer class="footer-wiki">
 
-  <div class="footer-logo">
-    <img src="../img/logo.svg" alt="Logo Wiki Diseño">
-    <h2>Wiki <span>Diseño</span></h2>
-  </div>
+    <div class="footer-logo">
+      <img src="img/logo.svg" alt="Logo Wiki Diseño">
+      <h2>Wiki <span>Diseño</span></h2>
+    </div>
 
-  <div class="footer-links">
-    <a href="#">Política de Privacidad</a>
-    <a href="#">Aviso Legal</a>
-    <a href="#">Contacto</a>
-  </div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Aviso Legal</a>
+      <a href="#">Contacto</a>
+    </div>
 
-  <div class="footer-links">
-    <a href="#">Preguntas Frecuentes</a>
-    <a href="#">Sobre Nosotros</a>
-  </div>
+    <div class="footer-links">
+      <a href="#">Preguntas Frecuentes</a>
+      <a href="#">Sobre Nosotros</a>
+    </div>
 
-  <div class="footer-social">
-    <a href="#">
-      <img src="../img/fb.svg" alt="Facebook">
-    </a>
-    <a href="#">
-      <img src="../img/ig.svg" alt="Instagram">
-    </a>
-    <a href="#">
-      <img src="../img/yt.svg" alt="YouTube">
-    </a>
-  </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook">
+        <img src="img/fb.svg" alt="">
+      </a>
 
-</footer>
+      <a href="#" aria-label="Instagram">
+        <img src="img/ig.svg" alt="">
+      </a>
 
+      <a href="#" aria-label="YouTube">
+        <img src="img/yt.svg" alt="">
+      </a>
+    </div>
 
+  </footer>
+<script>
+  const botonesFiltro = document.querySelectorAll(".menu-item[data-filtro]");
+  const tarjetasTema = document.querySelectorAll(".tarjeta-tema");
+
+  botonesFiltro.forEach(function (boton) {
+    boton.addEventListener("click", function () {
+      const filtroSeleccionado = boton.dataset.filtro;
+
+      botonesFiltro.forEach(function (botonMenu) {
+        botonMenu.classList.remove("activo");
+      });
+
+      boton.classList.add("activo");
+
+      tarjetasTema.forEach(function (tarjeta) {
+        const temaTarjeta = tarjeta.dataset.tema;
+
+        const mostrarTarjeta =
+          filtroSeleccionado === "todos" ||
+          temaTarjeta === filtroSeleccionado;
+
+        tarjeta.classList.toggle("oculta", !mostrarTarjeta);
+      });
+
+      /* En celular, cierra el menú después de aplicar el filtro */
+      const menuTemas = document.getElementById("menu-temas");
+      const botonMenu = document.getElementById("boton-menu");
+
+      if (window.innerWidth <= 700) {
+        menuTemas.classList.remove("abierto");
+        botonMenu.setAttribute("aria-expanded", "false");
+        botonMenu.setAttribute("aria-label", "Abrir menú");
+      }
+    });
+  });
+</script>
 <script>
   const botonArriba = document.getElementById("btn-arriba");
 
@@ -137,8 +551,7 @@
     });
   });
 </script>
-
-
-
+  
 </body>
 </html>
+
